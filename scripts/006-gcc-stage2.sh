@@ -62,7 +62,8 @@ for TARGET in "mips64r5900el-ps2-elf"; do
     --disable-tls \
     --enable-cxx-flags=-G0 \
     --enable-threads=posix \
-    $TARG_XTRA_OPTS
+    --with-libstdcxx-lock-policy=atomic \
+    $TARG_XTRA_OPTS1
 
   ## Compile and install.
   make --quiet -j "$PROC_NR" all
